@@ -27,6 +27,6 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "prisma-extensions.d.ts"
-  ],
+, "src/server/routers/auth-router.ts"  ],
   "exclude": ["node_modules"]
 }
