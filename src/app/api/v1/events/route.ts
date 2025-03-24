@@ -1,7 +1,7 @@
 import { FREE_QUOTA, PRO_QUOTA } from "@/config"
 import { db } from "@/db"
-import { DiscordClient } from "@/lib/discord-client"
-import { CATEGORY_NAME_VALIDATOR } from "@/lib/validators/category-validator"
+import { DiscordClient } from "../../../lib/discord-client"
+import { CATEGORY_NAME_VALIDATOR } from "../../../lib/validators/categoryValidator"
 import { NextRequest, NextResponse } from "next/server"
 import { z } from "zod"
 
@@ -16,7 +16,7 @@ const REQUEST_VALIDATOR = z
 export const POST = async (req: NextRequest) => {
   try {
     const authHeader = req.headers.get("Authorization")
-
+    console.log("Authorization Header:", authHeader);
     if (!authHeader) {
       return NextResponse.json({ message: "Unauthorized" }, { status: 401 })
     }
