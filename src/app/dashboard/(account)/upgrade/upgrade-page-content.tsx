@@ -51,7 +51,7 @@ export const UpgradePageContent = ({ plan }: { plan: Plan }) => {
 
           <div>
             <p className="text-2xl font-bold">
-              {usageData?.eventsUsed || 0} of{" "}
+              {usageData?.eventsUsed || 0} of&apos
               {usageData?.eventsLimit.toLocaleString() || 100}
             </p>
             <p className="text-xs/5 text-muted-foreground">
@@ -67,7 +67,7 @@ export const UpgradePageContent = ({ plan }: { plan: Plan }) => {
 
           <div>
             <p className="text-2xl font-bold">
-              {usageData?.categoriesUsed || 0} of{" "}
+              {usageData?.categoriesUsed || 0} of&apos
               {usageData?.categoriesLimit.toLocaleString() || 10}
             </p>
             <p className="text-xs/5 text-muted-foreground">Active categories</p>
@@ -76,7 +76,7 @@ export const UpgradePageContent = ({ plan }: { plan: Plan }) => {
       </div>
 
       <p className="text-sm text-gray-500">
-        Usage will reset{" "}
+        Usage will reset&apos
         {usageData?.resetDate ? (
           format(usageData.resetDate, "MMM d, yyyy")
         ) : (
@@ -87,7 +87,7 @@ export const UpgradePageContent = ({ plan }: { plan: Plan }) => {
             onClick={() => createCheckoutSession()}
             className="inline cursor-pointer underline text-brand-600"
           >
-            {" "}
+            &apos
             or upgrade now to increase your limit &rarr;
           </span>
         ) : null}
