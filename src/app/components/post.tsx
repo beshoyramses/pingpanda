@@ -18,7 +18,7 @@ export const RecentPost = () => {
 
   const createPost = useMutation({
     mutationFn: async ({ name }: { name: string }) => {
-      await client.post.create.$post({ name })
+      await client.post.create.$post({ json: { name } })
     },
     onSuccess: async () => {
       await queryClient.invalidateQueries({ queryKey: ["get-recent-post"] })
